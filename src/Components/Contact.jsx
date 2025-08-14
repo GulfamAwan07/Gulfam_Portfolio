@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
-import ParticlesBg from "particles-bg";
+
 import { toast, ToastContainer } from "react-toastify";
 
 const Contact = () => {
@@ -117,7 +117,7 @@ const Contact = () => {
         className="mt-4"
       />
         
-      <ParticlesBg particleSize={5}  type="circle" bg={true} />
+   
     </div>
   );
 };

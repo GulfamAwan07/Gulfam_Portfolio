@@ -1,5 +1,5 @@
 import React from "react";
-import ParticlesBg from "particles-bg";
+
 const About = () => {
   return (
     <div className="mt-20">
@@ -47,7 +47,6 @@ const About = () => {
         <span className="font-medium "> LLM APIs</span> to create intelligent,
         dynamic experiences. I believe learning never stops —.{" "}
       </p>
-          <ParticlesBg particleSize={5}  type="circle" bg={true} />
     </div>
   );
 };
