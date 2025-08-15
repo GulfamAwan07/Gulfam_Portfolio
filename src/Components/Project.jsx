@@ -49,7 +49,7 @@ const Project = () => {
             <div className="group relative w-full h-[440px] border-2 hover:scale-105 transition-transform duration-300 border-gray-300 bg-gray-100 rounded-2xl overflow-hidden">
               <img
                 className="w-screen  object-cover border-b-2 rounded-t-2xl"
-                src="src/assets/images/Ebey.PNG"
+                src="/image/ebeyy.png"
                 alt="Ebey Project"
               />
 
@@ -80,7 +80,7 @@ const Project = () => {
             <div className="group relative w-full h-[440px] border-2 hover:scale-105 transition-transform duration-300 border-gray-300 bg-gray-100 rounded-2xl overflow-hidden">
               <img
                 className="w-screen  object-cover border-b-2 rounded-t-2xl"
-                src="src/assets/images/DGO.PNG"
+                src="/image/Dgo.png"
                 alt="DGO Project"
               />
 
