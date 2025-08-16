@@ -3,9 +3,48 @@ import React from "react";
 const About = () => {
   return (
     <div className="mt-20">
-      <h1 className="text-4xl mt-10 sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl text-center font-bold">
-        About Me
-      </h1>
+      <div className="flex justify-center ">
+        <h1 className="text-4xl mt-14 sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl text-center font-bold">
+          About Me
+        </h1>
+         <div className="flex items-center justify-center  ">
+      <div className="relative w-[200px] h-[200px] flex items-center justify-center">
+        {/* Profile Image */}
+        <img 
+          className="w-24 h-24 rounded-full object-cover border-2  border-gray-400 z-10" 
+          src="./pic.jpg" 
+          alt="Profile"
+        />
+        
+        {/* Circular Text */}
+        <svg
+          viewBox="0 0 200 200"
+          className="absolute w-[200px] h-[200px] animate-spin"
+          style={{ 
+            animation: 'spin 10s linear infinite',
+          }}
+        >
+          <defs>
+            <path
+              id="circlePath"
+              d="M 100,100 m -55,0 a 55,55 0 1,1 110,0 a 55,55 0 1,1 -110,0"
+            />
+          </defs>
+          <text 
+            fill="black" 
+            fontSize="12" 
+            fontWeight="600" 
+            letterSpacing="2px"
+            fontFamily="Arial, sans-serif"
+          >
+            <textPath href="#circlePath" startOffset="0%">
+              ☆ SOFTWARE DEVELOPER   ☆ PROGRAMMER  
+            </textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+      </div>
       <p className="max-w-3xl mx-auto text-justify text-xl sm:text-lg leading-relaxed sm:leading-loose w-full px-4  sm:px-0 mt-5">
         I’m <span className="font-bold text-red-500">Gulfam Awan</span>, a
         curious mind and passionate
