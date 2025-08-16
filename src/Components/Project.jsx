@@ -21,7 +21,7 @@ const Project = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
 
   // Ebey project images
-  const images = ["./Ebey1.png", "./Ebey2.png", "./Ebey3.PNG"];
+  const images = ["./Ebey1.png", "./site2.png", "./site3.PNG"];
   const [imagesIndex, setImagesIndex] = useState(0);
 
   useEffect(() => {
