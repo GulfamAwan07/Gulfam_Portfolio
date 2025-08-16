@@ -263,6 +263,10 @@ const Project = () => {
           </motion.div>
         </div>
       </motion.div>
+
+        <div className="h-0.5 mt-10 bg-gradient-to-r from-red-500 to-blue-400"></div>
+
+
     </div>
   );
 };

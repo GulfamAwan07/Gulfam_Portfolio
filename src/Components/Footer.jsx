@@ -16,15 +16,15 @@ const Footer = () => {
 
         {/* Middle: Links */}
         <div className="flex gap-6">
-          <Link className="font-semibold underline" to="/About">About</Link>
-          <Link className="font-semibold underline" to="/Contact">Contact</Link>
+          <Link className="font-semibold underline hover:text-red-500" to="/About">About</Link>
+          <Link className="font-semibold underline hover:text-red-500" to="/Contact">Contact</Link>
         </div>
 
         {/* Right: Social Icons */}
         <div className="flex gap-4 text-xl">
-          <a href="https://github.com/GulfamAwan07"><FaGithub className="cursor-pointer" /></a>
-          <a href="https://www.linkedin.com/in/mgulfamawan/"><FaLinkedin className="cursor-pointer" /></a>
-          <a href="mailto:gulfamawan89@gmail.com"><CiMail className="cursor-pointer" /></a>
+          <a href="https://github.com/GulfamAwan07"><FaGithub className="cursor-pointer hover:scale-110" /></a>
+          <a href="https://www.linkedin.com/in/mgulfamawan/"><FaLinkedin className="cursor-pointer hover:scale-110" /></a>
+          <a href="mailto:gulfamawan89@gmail.com"><CiMail className="cursor-pointer hover:scale-110" /></a>
         </div>
       </div>
 

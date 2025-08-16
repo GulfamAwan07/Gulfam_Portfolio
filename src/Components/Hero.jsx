@@ -50,6 +50,7 @@ const Hero = () => {
           </h3>
         </div>
       </div>
+      
     
     </div>
   );

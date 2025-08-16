@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div className="mt-20">
@@ -86,6 +86,21 @@ const About = () => {
         <span className="font-medium "> LLM APIs</span> to create intelligent,
         dynamic experiences. I believe learning never stops —.{" "}
       </p>
+
+        <div className="flex justify-center items-center md:gap-96 gap-10 mt-12">
+  <a
+    href="/documents/Gulfam-CV.pdf"
+    className="mt-4 w-fit border-2 px-4 py-2 rounded-3xl text-white bg-gradient-to-r from-red-500 to-blue-300 text-sm font-bold hover:scale-105"
+  >
+    Resume
+  </a>
+
+  <Link to="/Contact" className="mt-4 w-fit border-2 px-4 py-2 rounded-3xl text-white bg-gradient-to-r from-red-500 to-blue-300 text-sm font-bold hover:scale-105">Hire Me</Link>
+</div>
+
+<div className="h-0.5 mt-10 bg-gradient-to-r from-red-500 to-blue-400"></div>
+
+
     </div>
   );
 };
