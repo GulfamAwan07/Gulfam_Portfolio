@@ -7,43 +7,6 @@ const About = () => {
         <h1 className="text-4xl mt-14 sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl text-center font-bold">
           About Me
         </h1>
-         <div className="flex items-center justify-center  ">
-      <div className="relative w-[200px] h-[200px] flex items-center justify-center">
-        {/* Profile Image */}
-        <img 
-          className="w-24 h-24 rounded-full object-cover border-2  border-gray-400 z-10" 
-          src="./pic.jpg" 
-          alt="Profile"
-        />
-        
-        {/* Circular Text */}
-        <svg
-          viewBox="0 0 200 200"
-          className="absolute w-[200px] h-[200px] animate-spin"
-          style={{ 
-            animation: 'spin 10s linear infinite',
-          }}
-        >
-          <defs>
-            <path
-              id="circlePath"
-              d="M 100,100 m -55,0 a 55,55 0 1,1 110,0 a 55,55 0 1,1 -110,0"
-            />
-          </defs>
-          <text 
-            fill="black" 
-            fontSize="12" 
-            fontWeight="600" 
-            letterSpacing="2px"
-            fontFamily="Arial, sans-serif"
-          >
-            <textPath href="#circlePath" startOffset="0%">
-              ☆ SOFTWARE DEVELOPER   ☆ PROGRAMMER  
-            </textPath>
-          </text>
-        </svg>
-      </div>
-    </div>
       </div>
       <p className="max-w-3xl mx-auto text-justify text-xl sm:text-lg leading-relaxed sm:leading-loose w-full px-4  sm:px-0 mt-5">
         I’m <span className="font-bold text-red-500">Gulfam Awan</span>, a
@@ -87,20 +50,23 @@ const About = () => {
         dynamic experiences. I believe learning never stops —.{" "}
       </p>
 
-        <div className="flex justify-center items-center md:gap-96 gap-10 mt-12">
-  <a
-    href="/documents/Gulfam-CV.pdf"
-    className="mt-4 w-fit border-2 px-4 py-2 rounded-3xl text-white bg-gradient-to-r from-red-500 to-blue-300 text-sm font-bold hover:scale-105"
-  >
-    Resume
-  </a>
+      <div className="flex justify-center items-center md:gap-96 gap-10 mt-12">
+        <a
+          href="/documents/Gulfam-CV.pdf"
+          className="mt-4 w-fit border-2 px-4 py-2 rounded-3xl text-white bg-gradient-to-r from-red-500 to-blue-300 text-sm font-bold hover:scale-105"
+        >
+          Resume
+        </a>
 
-  <Link to="/Contact" className="mt-4 w-fit border-2 px-4 py-2 rounded-3xl text-white bg-gradient-to-r from-red-500 to-blue-300 text-sm font-bold hover:scale-105">Hire Me</Link>
-</div>
+        <Link
+          to="/Contact"
+          className="mt-4 w-fit border-2 px-4 py-2 rounded-3xl text-white bg-gradient-to-r from-red-500 to-blue-300 text-sm font-bold hover:scale-105"
+        >
+          Hire Me
+        </Link>
+      </div>
 
-<div className="h-0.5 mt-10 bg-gradient-to-r from-red-500 to-blue-400"></div>
-
-
+      <div className="h-0.5 mt-10 bg-gradient-to-r from-red-500 to-blue-400"></div>
     </div>
   );
 };

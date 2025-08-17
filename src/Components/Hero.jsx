@@ -31,27 +31,71 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className=" text-black bg-[url('/image/myPic.png')] w-screen h-screen bg-cover bg-center py-16 px-4 sm:px-10 lg:px-20">
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
-        <div className="max-w-xl text-center lg:text-left">
-          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl mt-1 text-[#ff85a1] md:mt-20 leading-snug">Hi, I am</h1>
-          <h1 className="mt-2 font-bold text-3xl md:text-4xl  text-[#ff5c8a] sm:text-3xl ">
-            Gulfam Awan
+    <div>
+      <div className="flex flex-col lg:flex-row items-center  justify-between px-6">
+        <div className="max-w-xl text-center  lg:text-left md:mx-24 mt-10">
+          <h1 className="font-bold   md:text-2xl mt-1 text-gray-800 text-lg leading-snug">
+            Hi, I'm Gulfam Awan
           </h1>
 
-          <h3 className="md:text-4xl sm:text-3xl px-2 font-bold mt-2">
-            {" "}
+          <h3 className="md:text-4xl sm:text-3xl font-bold mt-2">
             <span
               ref={textRef}
-              className="text-3xl md:text-4xl mt-0transition-opacity opacity-100 text-[#ff477e] duration-500"
+              className="text-3xl md:text-4xl transition-opacity opacity-100 text-red-500 duration-500"
             >
               Software Developer
             </span>
           </h3>
         </div>
+
+        <div className="relative w-[300px] h-[300px] flex mt-14 mx-20 items-center justify-center">
+          <img
+            className="w-36 h-36 rounded-full object-cover border-4 border-gray-400 z-10"
+            src="./pic.jpg"
+            alt="Profile"
+          />
+
+          {/* Circular Text */}
+          <svg
+            viewBox="0 0 300 300"
+            className="absolute w-[300px] h-[300px] animate-spin"
+            style={{
+              animation: "spin 10s linear infinite",
+            }}
+          >
+            <defs>
+              <path
+                id="circlePath"
+                d="M 150,150 m -85,0 a 85,85 0 1,1 170,0 a 85,85 0 1,1 -170,0"
+              />
+            </defs>
+            <text
+              fill="black"
+              fontSize="16"
+              fontWeight="600"
+              letterSpacing="4px"
+              fontFamily="Arial, sans-serif"
+            >
+              <textPath href="#circlePath" startOffset="0%">
+                ☆ SOFTWARE DEVELOPER ☆ PROBLEM SOLVER
+              </textPath>
+            </text>
+          </svg>
+        </div>
       </div>
-      
-    
+
+      <div className="flex justify-center mt-12">
+        <h1 className="text-xl mx-6 font-semibold md:text-4xl md:font-bold animate-bounce">
+          “I <span className="text-red-500">Don’t </span>{" "}
+          <span className="text-blue-500">just write</span>{" "}
+          <span className="text-green-500">Code</span>{" "}
+          <span className="text-pink-500">━</span> I{" "}
+          <span className="text-purple-500">Solve</span>{" "}
+          <span className="text-orange-500">Problems.</span>”
+        </h1>
+      </div>
+
+      <div className="h-0.5 mt-10 bg-gradient-to-r from-red-500 to-blue-400"></div>
     </div>
   );
 };
