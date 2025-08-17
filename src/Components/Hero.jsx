@@ -32,7 +32,7 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center  justify-between px-6">
+      <div className="flex flex-col md:flex-row items-center  justify-between px-6">
         <div className="max-w-xl text-center  lg:text-left md:mx-24 mt-10">
           <h1 className="font-bold   md:text-2xl mt-1 text-gray-800 text-lg leading-snug">
             Hi, I'm Gulfam Awan
