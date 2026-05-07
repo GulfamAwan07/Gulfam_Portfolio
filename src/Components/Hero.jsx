@@ -6,7 +6,8 @@ const Hero = () => {
   useEffect(() => {
     const professions = [
       "Software Developer",
-      "Front-End Developer",
+      "Front-End Engineer",
+      "Web3 Frontend Dev",
       "Programmer",
       "Web Developer",
     ];
