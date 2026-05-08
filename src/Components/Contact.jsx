@@ -12,7 +12,7 @@ const Contact = () => {
   });
 
   return (
-    <div className="mt-10 md:mt-20 px-4">
+    <div className="mt-12 px-4">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold">
         Contact
       </h1>

@@ -1,12 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class", // enable dark mode via a class
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
+      },
+      animation: {
+        blink: "blink 0.7s step-end infinite",
+      },
+    },
   },
   plugins: [],
-}
+};

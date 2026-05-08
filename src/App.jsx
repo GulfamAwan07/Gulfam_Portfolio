@@ -6,17 +6,17 @@ import Skills from "./Components/Skills";
 import Project from "./Components/Project";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
-
 import Navbar from "./Components/Navbar";
 import About from "./Components/About";
 import { ToastContainer } from "react-toastify";
+
 
 function App() {
   return (
     <Router>
       <Navbar />
-        <ToastContainer  />
-       
+      <ToastContainer />
+
       <Routes>
         <Route
           path="/"
@@ -38,7 +38,6 @@ function App() {
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    
     </Router>
   );
 }

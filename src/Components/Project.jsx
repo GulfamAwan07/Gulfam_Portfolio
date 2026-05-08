@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-
 const FaGithub = () => (
   <svg
     className="w-6 h-6 sm:w-8 sm:h-8"
@@ -45,228 +43,187 @@ const Project = () => {
     return () => clearInterval(time);
   }, [images.length]);
 
-  const sectionVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const textVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-      scale: 0.95,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-        type: "spring",
-        stiffness: 60,
-        damping: 20,
-      },
-    },
-  };
-
   return (
-    <div className="mt-10 sm:mt-20 px-3 sm:px-4 lg:px-8">
-      <motion.div
-        className="mt-8 sm:mt-16"
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
-      >
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 sm:mb-8">
-          Projects
-        </h1>
+    <div className="mt-12 px-3 sm:px-4 lg:px-8">
+      <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 sm:mb-8">
+        Projects
+      </h1>
 
-        {/* Mobile-first responsive grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
-          {/* Ebey Shopping Site */}
-          <motion.div variants={textVariants} className="w-full">
-            <div className="group relative w-full h-[380px] sm:h-[420px] border-2 hover:scale-[1.02] sm:hover:scale-105 transition-transform duration-300 border-gray-300 bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
-              <img
-                className="w-auto h-[200px] object-contain bg-white border-b-2 border-gray-300 rounded-t-2xl mx-auto"
-                src={images[imagesIndex]}
-                alt="Ebey Project"
-              />
+      {/* Mobile-first responsive grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
+        {/* Ebey Shopping Site */}
+        <div className="w-full">
+          <div className="group relative w-full h-[380px] sm:h-[420px] border-2 hover:scale-[1.02] sm:hover:scale-105 transition-transform duration-300 border-gray-300 bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+            <img
+              className="w-auto h-[200px] object-contain bg-white border-b-2 border-gray-300 rounded-t-2xl mx-auto"
+              src={images[imagesIndex]}
+              alt="Ebey Project"
+            />
 
-              <div className="p-3 sm:p-4 flex flex-col h-[calc(100%-200px)]">
-                <h1 className="text-lg sm:text-xl text-center text-gray-900 font-bold mb-2">
-                  Ebey Shopping Site
-                </h1>
+            <div className="p-3 sm:p-4 flex flex-col h-[calc(100%-200px)]">
+              <h1 className="text-lg sm:text-xl text-center text-gray-900 font-bold mb-2">
+                Ebey Shopping Site
+              </h1>
 
-                <div className="flex-1 overflow-auto text-xs sm:text-sm space-y-2">
-                  <p className="text-gray-700 font-sans text-center">
-                    I crafted the landing page for ebey.site with a clean and
-                    modern UI.
+              <div className="flex-1 overflow-auto text-xs sm:text-sm space-y-2">
+                <p className="text-gray-700 font-sans text-center">
+                  I crafted the landing page for ebey.site with a clean and
+                  modern UI.
+                </p>
+
+                <div className="text-center">
+                  <h2 className="text-gray-900 font-semibold mb-1">
+                    Tech Stack
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    • React.js • JavaScript • CSS • JS Libraries
                   </p>
+                </div>
 
-                  <div className="text-center">
-                    <h2 className="text-gray-900 font-semibold mb-1">
-                      Tech Stack
-                    </h2>
-                    <p className="text-gray-700 leading-relaxed">
-                      • React.js • JavaScript • CSS • JS Libraries
-                    </p>
-                  </div>
-
-                  <div className="text-center">
-                    <h2 className="font-semibold text-gray-900 mb-1">
-                      Description
-                    </h2>
-                    <p className="text-gray-700 leading-relaxed">
-                      I crafted the landing page for ebey.site, featuring a
-                      clean, modern UI and smooth user experience. It's designed
-                      to be visually appealing and fully responsive across
-                      devices.
-                    </p>
-                  </div>
+                <div className="text-center">
+                  <h2 className="font-semibold text-gray-900 mb-1">
+                    Description
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    I crafted the landing page for ebey.site, featuring a clean,
+                    modern UI and smooth user experience. It's designed to be
+                    visually appealing and fully responsive across devices.
+                  </p>
                 </div>
               </div>
-
-              <a
-                href="https://github.com/GulfamAwan07/Ebey.pk-site-UI.git"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <div className="text-2xl sm:text-3xl border-2 border-gray-600 bg-gradient-to-r from-red-500 to-blue-300 p-1 rounded-full text-black hover:text-gray-800">
-                  <FaGithub />
-                </div>
-              </a>
             </div>
-          </motion.div>
 
-          {/* Blog App */}
-          <motion.div variants={textVariants} className="w-full">
-            <div className="group relative w-full h-[380px] sm:h-[420px] border-2 hover:scale-[1.02] sm:hover:scale-105 transition-transform duration-300 border-gray-300 bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
-              <img
-                className="w-auto h-[200px] object-contain bg-white border-b-2 border-gray-300 rounded-t-2xl mx-auto"
-                src={photo[photoIndex]}
-                alt="Blog App"
-              />
-
-              <div className="p-3 sm:p-4 flex flex-col h-[calc(100%-200px)]">
-                <h1 className="text-lg sm:text-xl text-center text-gray-900 font-bold mb-2">
-                  Blog App
-                </h1>
-
-                <div className="flex-1 overflow-auto text-xs sm:text-sm space-y-2">
-                  <p className="text-gray-700 font-sans text-center">
-                    A modern Full Stack Blog App with multiple Amazing features.
-                  </p>
-
-                  <div className="text-center">
-                    <h2 className="text-gray-900 font-semibold mb-1">
-                      Tech Stack
-                    </h2>
-                    <p className="text-gray-700 leading-relaxed">
-                      • Next.js • React.js • REDUX • JWT Auth • SupaBase • JS
-                      Libraries
-                    </p>
-                  </div>
-
-                  <div className="text-center">
-                    <h2 className="font-semibold text-gray-900 mb-1">
-                      Description
-                    </h2>
-                    <p className="text-gray-700 leading-relaxed">
-                      A full-stack blog application with user authentication,
-                      content management, and modern UI. Features include user
-                      registration, post creation, and responsive design for
-                      optimal user experience.
-                    </p>
-                  </div>
-                </div>
+            <a
+              href="https://github.com/GulfamAwan07/Ebey.pk-site-UI.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <div className="text-2xl sm:text-3xl border-2 border-gray-600 bg-gradient-to-r from-red-500 to-blue-300 p-1 rounded-full text-black hover:text-gray-800">
+                <FaGithub />
               </div>
-
-              <a
-                href="https://github.com/alfabolt-training/web-intern-GulfamAwan07.git"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <div className="text-2xl sm:text-3xl border-2 border-gray-600 bg-gradient-to-r from-red-500 to-blue-300 p-1 rounded-full text-black hover:text-gray-800">
-                  <FaGithub />
-                </div>
-              </a>
-            </div>
-          </motion.div>
-
-          {/* DGO Portfolio */}
-          <motion.div
-            variants={textVariants}
-            className="w-full md:col-span-2 xl:col-span-1"
-          >
-            <div className="group relative w-full h-[380px] sm:h-[420px] border-2 hover:scale-[1.02] sm:hover:scale-105 transition-transform duration-300 border-gray-300 bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
-              <img
-                className="w-auto h-[200px] object-contain bg-white border-b-2 border-gray-300 rounded-t-2xl mx-auto"
-                src={pics[picsIndex]}
-                alt="DGO Project"
-              />
-
-              <div className="p-3 sm:p-4 flex flex-col h-[calc(100%-200px)]">
-                <h2 className="text-lg sm:text-xl text-center text-gray-900 font-bold mb-2">
-                  DGO Portfolio
-                </h2>
-
-                <div className="flex-1 overflow-auto text-xs sm:text-sm space-y-2">
-                  <p className="text-gray-700 font-sans text-center">
-                    I designed the frontend of DGO, a modern Restaurant
-                    Portfolio.
-                  </p>
-
-                  <div className="text-center">
-                    <h2 className="text-gray-900 font-semibold mb-1">
-                      Tech Stack
-                    </h2>
-                    <p className="text-gray-700 leading-relaxed">
-                      • React.js • JavaScript • Tailwindcss • JS Libraries
-                    </p>
-                  </div>
-
-                  <div className="text-center">
-                    <h2 className="font-semibold text-gray-900 mb-1">
-                      Description
-                    </h2>
-                    <p className="text-gray-700 leading-relaxed">
-                      I designed the frontend for DGO, a sleek and modern
-                      restaurant portfolio website. The interface features a
-                      clean layout, rich visuals, and smooth user interactions
-                      to showcase the brand's identity. Built with performance
-                      and responsiveness in mind, it delivers an engaging
-                      experience across all devices.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <a
-                href="https://github.com/GulfamAwan07/DGO-Portfolio-Site.git"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <div className="text-2xl sm:text-3xl border-2 border-gray-600 bg-gradient-to-r from-red-500 to-blue-300 p-1 rounded-full text-black hover:text-gray-800">
-                  <FaGithub />
-                </div>
-              </a>
-            </div>
-          </motion.div>
+            </a>
+          </div>
         </div>
-      </motion.div>
 
-        <div className="h-0.5 mt-10 bg-gradient-to-r from-red-500 to-blue-400"></div>
+        {/* Blog App */}
+        <div className="w-full">
+          <div className="group relative w-full h-[380px] sm:h-[420px] border-2 hover:scale-[1.02] sm:hover:scale-105 transition-transform duration-300 border-gray-300 bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+            <img
+              className="w-auto h-[200px] object-contain bg-white border-b-2 border-gray-300 rounded-t-2xl mx-auto"
+              src={photo[photoIndex]}
+              alt="Blog App"
+            />
 
+            <div className="p-3 sm:p-4 flex flex-col h-[calc(100%-200px)]">
+              <h1 className="text-lg sm:text-xl text-center text-gray-900 font-bold mb-2">
+                Blog App
+              </h1>
 
+              <div className="flex-1 overflow-auto text-xs sm:text-sm space-y-2">
+                <p className="text-gray-700 font-sans text-center">
+                  A modern Full Stack Blog App with multiple Amazing features.
+                </p>
+
+                <div className="text-center">
+                  <h2 className="text-gray-900 font-semibold mb-1">
+                    Tech Stack
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    • Next.js • React.js • REDUX • JWT Auth • SupaBase • JS
+                    Libraries
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <h2 className="font-semibold text-gray-900 mb-1">
+                    Description
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    A full-stack blog application with user authentication,
+                    content management, and modern UI. Features include user
+                    registration, post creation, and responsive design for
+                    optimal user experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://github.com/alfabolt-training/web-intern-GulfamAwan07.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <div className="text-2xl sm:text-3xl border-2 border-gray-600 bg-gradient-to-r from-red-500 to-blue-300 p-1 rounded-full text-black hover:text-gray-800">
+                <FaGithub />
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* DGO Portfolio */}
+        <div
+          
+          className="w-full md:col-span-2 xl:col-span-1"
+        >
+          <div className="group relative w-full h-[380px] sm:h-[420px] border-2 hover:scale-[1.02] sm:hover:scale-105 transition-transform duration-300 border-gray-300 bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+            <img
+              className="w-auto h-[200px] object-contain bg-white border-b-2 border-gray-300 rounded-t-2xl mx-auto"
+              src={pics[picsIndex]}
+              alt="DGO Project"
+            />
+
+            <div className="p-3 sm:p-4 flex flex-col h-[calc(100%-200px)]">
+              <h2 className="text-lg sm:text-xl text-center text-gray-900 font-bold mb-2">
+                DGO Portfolio
+              </h2>
+
+              <div className="flex-1 overflow-auto text-xs sm:text-sm space-y-2">
+                <p className="text-gray-700 font-sans text-center">
+                  I designed the frontend of DGO, a modern Restaurant Portfolio.
+                </p>
+
+                <div className="text-center">
+                  <h2 className="text-gray-900 font-semibold mb-1">
+                    Tech Stack
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    • React.js • JavaScript • Tailwindcss • JS Libraries
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <h2 className="font-semibold text-gray-900 mb-1">
+                    Description
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    I designed the frontend for DGO, a sleek and modern
+                    restaurant portfolio website. The interface features a clean
+                    layout, rich visuals, and smooth user interactions to
+                    showcase the brand's identity. Built with performance and
+                    responsiveness in mind, it delivers an engaging experience
+                    across all devices.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://github.com/GulfamAwan07/DGO-Portfolio-Site.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <div className="text-2xl sm:text-3xl border-2 border-gray-600 bg-gradient-to-r from-red-500 to-blue-300 p-1 rounded-full text-black hover:text-gray-800">
+                <FaGithub />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="h-0.5 mt-10 bg-gradient-to-r from-red-500 to-blue-400"></div>
     </div>
   );
 };

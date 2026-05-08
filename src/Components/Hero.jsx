@@ -1,62 +1,71 @@
-import React, { useEffect, useRef } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
 const Hero = () => {
-  const textRef = useRef(null);
+  const professions = [
+    "Software Developer",
+    "Front-End Engineer",
+    "Web3 Frontend Dev",
+    "Programmer",
+    "Web Developer",
+  ];
+
+  const [displayed, setDisplayed] = useState("");
+  const [profIdx, setProfIdx] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  const charIdx = useRef(0);
 
   useEffect(() => {
-    const professions = [
-      "Software Developer",
-      "Front-End Engineer",
-      "Web3 Frontend Dev",
-      "Programmer",
-      "Web Developer",
-    ];
-    let index = 0;
+    const current = professions[profIdx];
+    const TYPE_SPEED = 80;
+    const DELETE_SPEED = 40;
+    const PAUSE = 1500;
 
-    const changeText = () => {
-      if (textRef.current) {
-        textRef.current.classList.remove("opacity-100");
-        textRef.current.classList.add("opacity-0");
+    let timeout;
 
-        setTimeout(() => {
-          index = (index + 1) % professions.length;
-          textRef.current.textContent = professions[index];
-          textRef.current.classList.remove("opacity-0");
-          textRef.current.classList.add("opacity-100");
-        }, 500);
+    if (!deleting) {
+      if (charIdx.current < current.length) {
+        timeout = setTimeout(() => {
+          charIdx.current += 1;
+          setDisplayed(current.slice(0, charIdx.current));
+        }, TYPE_SPEED);
+      } else {
+        timeout = setTimeout(() => setDeleting(true), PAUSE);
       }
-    };
+    } else {
+      if (charIdx.current > 0) {
+        timeout = setTimeout(() => {
+          charIdx.current -= 1;
+          setDisplayed(current.slice(0, charIdx.current));
+        }, DELETE_SPEED);
+      } else {
+        setDeleting(false);
+        setProfIdx((prev) => (prev + 1) % professions.length);
+      }
+    }
 
-    const interval = setInterval(changeText, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
+    return () => clearTimeout(timeout);
+  }, [displayed, deleting, profIdx]);
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center  justify-between px-6">
+      <div className="flex flex-col md:flex-row items-center  justify-between px-6 overflow-hidden">
         <div className="max-w-xl text-center  lg:text-left md:mx-24 mt-10">
-          <h1 className="font-bold   md:text-2xl mt-1 text-gray-800 text-lg leading-snug">
+          <h1 className="font-bold   md:text-2xl mt-1 text-gray-800 text-xl leading-snug">
             Hi, I'm Gulfam Awan
           </h1>
 
           <h3 className="md:text-4xl sm:text-3xl font-bold mt-2">
-            <span
-              ref={textRef}
-              className="text-3xl md:text-4xl transition-opacity opacity-100 text-red-500 duration-500"
-            >
-              Software Developer
+            <span className="split text-3xl md:text-4xl transition-opacity opacity-100 text-red-500 duration-500">
+              {displayed}
             </span>
           </h3>
         </div>
 
-        <div className="relative w-[300px] h-[300px] flex mt-14 mx-20 items-center justify-center">
+        <div className="relative w-[340px] h-[340px] flex mt-2 mx-20 items-center justify-center">
           <img
             className="w-36 h-36 rounded-full object-cover border-4 border-gray-400 z-10"
             src="./pic.jpg"
             alt="Profile"
           />
 
-          {/* Circular Text */}
           <svg
             viewBox="0 0 300 300"
             className="absolute w-[300px] h-[300px] animate-spin"

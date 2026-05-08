@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 const About = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-12">
       <div className="flex justify-center ">
-        <h1 className="text-4xl mt-14 sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl text-center font-bold">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-6xl text-center font-bold">
           About Me
         </h1>
       </div>
