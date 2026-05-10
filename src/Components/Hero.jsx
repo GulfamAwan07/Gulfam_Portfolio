@@ -59,10 +59,10 @@ const Hero = () => {
           </h3>
         </div>
 
-        <div className="relative w-[340px] h-[340px] flex mt-2 mx-20 items-center justify-center">
+        <div className="relative w-[350px] h-[350px] flex mt-2 mx-20 items-center justify-center">
           <img
             className="w-36 h-36 rounded-full object-cover border-4 border-gray-400 z-10"
-            src="./pic.jpg"
+            src="./image/myPic.png"
             alt="Profile"
           />
 
