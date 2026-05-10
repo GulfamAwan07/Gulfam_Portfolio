@@ -27,14 +27,14 @@ const Contact = () => {
           onSubmit={(values, { resetForm }) => {
             emailjs
               .send(
-                "service_buc16y8",
+                "service_mbp83nj",
                 "template_j6olfzl",
                 {
                   from_name: values.name,
                   from_email: values.email,
                   message: values.message,
                 },
-                "GlmtDOv-CI1Fd_zj7"
+                "8u7SP9sTZvSGjfx2j",
               )
               .then((res) => {
                 toast.success("Message Sent Successfully!");
@@ -50,7 +50,9 @@ const Contact = () => {
           {({ isSubmitting }) => (
             <Form className="space-y-4">
               <div>
-                <label className="block font-semibold text-sm sm:text-base mb-1">Name</label>
+                <label className="block font-semibold text-sm sm:text-base mb-1">
+                  Name
+                </label>
                 <Field
                   type="text"
                   name="name"
@@ -64,7 +66,9 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block font-semibold text-sm sm:text-base mb-1">Email</label>
+                <label className="block font-semibold text-sm sm:text-base mb-1">
+                  Email
+                </label>
                 <Field
                   type="email"
                   name="email"
@@ -78,7 +82,9 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block font-semibold text-sm sm:text-base mb-1">Message</label>
+                <label className="block font-semibold text-sm sm:text-base mb-1">
+                  Message
+                </label>
                 <Field
                   as="textarea"
                   name="message"
@@ -103,7 +109,7 @@ const Contact = () => {
           )}
         </Formik>
       </div>
-      
+
       <ToastContainer
         position="top-center"
         autoClose={3000}
@@ -116,8 +122,6 @@ const Contact = () => {
         pauseOnHover
         className="mt-4"
       />
-        
-   
     </div>
   );
 };

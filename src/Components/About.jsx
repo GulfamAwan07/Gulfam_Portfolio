@@ -18,16 +18,13 @@ const About = () => {
         <br />
         <br />
         With a background in Software Engineering and professional experience at{" "}
-        <a href="..." className="text-blue-500 hover:underline font-semibold">
-          Alfabolt ↗
-        </a>{" "}
+        <span className="text-blue-500 font-semibold">
+          Alfabolt
+        </span>{" "}
         and{" "}
-        <a
-          href="/documents/M Gulfam Experience Letter.pdf"
-          className="text-blue-500 hover:underline font-semibold"
-        >
-          Kaizen Global ↗
-        </a>
+        <span className="text-blue-500 font-semibold">
+          Kaizen Global
+        </span>
         , I architect production-ready platforms that bridge the gap between
         ambitious technical requirements and scalable reality. Whether it’s
         <span className="font-medium text-gray-900 dark:text-white">
